@@ -1,0 +1,25 @@
+{
+  "name": "ai-challenge-evaluator",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "workspaces": ["apps/dashboard"],
+  "scripts": {
+    "evaluate": "tsx scripts/evaluate.ts",
+    "compare": "tsx scripts/compare.ts",
+    "refresh-dashboard": "tsx scripts/refresh-dashboard.ts",
+    "dashboard": "npm run refresh-dashboard && npm run dev --workspace @challenge/dashboard",
+    "build": "npm run refresh-dashboard && npm run build --workspace @challenge/dashboard",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "tsx": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.7.0"
+  }
+}

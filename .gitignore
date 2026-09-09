@@ -1,0 +1,9 @@
+node_modules/
+apps/dashboard/node_modules/
+apps/dashboard/dist/
+.tmp/
+.env
+.DS_Store
+# Submission result files are local/private by default.
+data/submissions/*.json
+!data/submissions/.gitkeep
