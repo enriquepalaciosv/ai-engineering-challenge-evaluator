@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-09T16:18:21.482Z",
+  "generatedAt": "2026-09-09T21:20:28.816Z",
   "submissions": [
     {
       "id": "alex-505b0587",
@@ -360,7 +360,7 @@
     "adopt": [
       {
         "title": "Keep explicit regression protection",
-        "rationale": "Nico's submission provides the strongest visible test signal while preserving 100% hidden correctness.",
+        "rationale": "Nico's submission provides the strongest visible test signal while preserving 100% correctness.",
         "evidence": [
           "11 added test cases detected.",
           "Bug regression signal: yes.",
@@ -369,7 +369,7 @@
       },
       {
         "title": "Test an independent AI review step before PR submission",
-        "rationale": "Alex recorded a review step and achieved full hidden correctness. This is an observed association, not proof of causation, so it is a good practice to standardize experimentally.",
+        "rationale": "Alex recorded a review step and achieved full correctness. This is an observed association, not proof of causation, so it is a good practice to standardize experimentally.",
         "evidence": [
           "Independent review signal found in AI_WORKFLOW.md.",
           "100% hidden checks passed."
@@ -399,7 +399,7 @@
         "title": "Combine the leanest successful flow with the strongest regression strategy",
         "rationale": "Try the low-iteration structure observed in Nico while explicitly adopting the regression-protection behavior observed in Nico.",
         "evidence": [
-          "Nico: 5 logged AI workflow steps, 100% hidden correctness.",
+          "Nico: 5 logged AI workflow steps, 100% correctness.",
           "Nico: 11 added test cases detected."
         ]
       }

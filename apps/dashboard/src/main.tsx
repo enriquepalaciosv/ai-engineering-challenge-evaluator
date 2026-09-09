@@ -84,7 +84,7 @@ function SubmissionCard({ item }: { item: Evaluation }) {
       </div>
       <WorkflowStepper workflow={item.workflow.primaryWorkflow} density="comfortable" />
       <div className="metric-grid">
-        <Metric label="Hidden correctness" value={`${item.correctness.hiddenPercent}%`} good={item.correctness.hiddenPercent === 100} />
+        <Metric label="Correctness" value={`${item.correctness.hiddenPercent}%`} good={item.correctness.hiddenPercent === 100} />
         <Metric label="Added tests" value={item.regressionProtection.addedTestCases} />
         <Metric label="Workflow steps" value={item.workflow.timelineSteps} />
         <Metric label="Rework signals" value={item.workflow.reworkItems} />
@@ -123,7 +123,7 @@ function RecommendationColumn({ title, items }: { title: string; items: Recommen
 
 function ComparisonTable({ items }: { items: Evaluation[] }) {
   return <div className="table-wrap"><table><thead><tr><th>Dimension</th>{items.map((x) => <th key={x.id}>{x.label}</th>)}</tr></thead><tbody>
-    <tr><td>Hidden correctness</td>{items.map((x) => <td key={x.id}>{x.correctness.hiddenPercent}%</td>)}</tr>
+    <tr><td>Correctness</td>{items.map((x) => <td key={x.id}>{x.correctness.hiddenPercent}%</td>)}</tr>
     <tr><td>Regression tests added</td>{items.map((x) => <td key={x.id}>{x.regressionProtection.addedTestCases}</td>)}</tr>
     <tr><td>Typecheck / lint</td>{items.map((x) => <td key={x.id}>{x.maintainability.typecheckPass ? "✓" : "✗"} / {x.maintainability.lintPass ? "✓" : "✗"}</td>)}</tr>
     <tr><td>Workflow</td>{items.map((x) => <td key={x.id}><WorkflowStepper workflow={x.workflow.primaryWorkflow} density="compact" /></td>)}</tr>

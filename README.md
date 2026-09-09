@@ -79,7 +79,7 @@ Then open the Vite URL shown in the terminal (default port `4173`).
 The dashboard includes:
 
 - Side-by-side dimensions without a total score
-- Hidden correctness
+- Correctness
 - Regression-test signals
 - Static verification
 - Workflow shape, AI steps and rework

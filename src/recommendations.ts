@@ -19,7 +19,7 @@ export function buildRecommendations(submissions: SubmissionEvaluation[]): Dashb
   if (strongestTests && strongestTests.regressionProtection.addedTestCases >= 2) {
     adopt.push({
       title: "Keep explicit regression protection",
-      rationale: `${strongestTests.label}'s submission provides the strongest visible test signal while preserving ${strongestTests.correctness.hiddenPercent}% hidden correctness.`,
+      rationale: `${strongestTests.label}'s submission provides the strongest visible test signal while preserving ${strongestTests.correctness.hiddenPercent}% correctness.`,
       evidence: [
         `${strongestTests.regressionProtection.addedTestCases} added test cases detected.`,
         `Bug regression signal: ${strongestTests.regressionProtection.bugRegressionSignal ? "yes" : "no"}.`,
@@ -31,7 +31,7 @@ export function buildRecommendations(submissions: SubmissionEvaluation[]): Dashb
   if (reviewedCorrect) {
     adopt.push({
       title: "Test an independent AI review step before PR submission",
-      rationale: `${reviewedCorrect.label} recorded a review step and achieved full hidden correctness. This is an observed association, not proof of causation, so it is a good practice to standardize experimentally.`,
+      rationale: `${reviewedCorrect.label} recorded a review step and achieved full correctness. This is an observed association, not proof of causation, so it is a good practice to standardize experimentally.`,
       evidence: ["Independent review signal found in AI_WORKFLOW.md.", "100% hidden checks passed."],
     });
   }
@@ -67,7 +67,7 @@ export function buildRecommendations(submissions: SubmissionEvaluation[]): Dashb
       title: "Combine the leanest successful flow with the strongest regression strategy",
       rationale: `Try the low-iteration structure observed in ${leanCorrect.label} while explicitly adopting the regression-protection behavior observed in ${strongestTests.label}.`,
       evidence: [
-        `${leanCorrect.label}: ${leanCorrect.workflow.timelineSteps} logged AI workflow steps, ${leanCorrect.correctness.hiddenPercent}% hidden correctness.`,
+        `${leanCorrect.label}: ${leanCorrect.workflow.timelineSteps} logged AI workflow steps, ${leanCorrect.correctness.hiddenPercent}% correctness.`,
         `${strongestTests.label}: ${strongestTests.regressionProtection.addedTestCases} added test cases detected.`,
       ],
     });
