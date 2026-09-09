@@ -1,3 +1,7 @@
+declare global {
+  const __CHALLENGE_REF__: string;
+}
+
 export interface Evaluation {
   id: string;
   label: string;

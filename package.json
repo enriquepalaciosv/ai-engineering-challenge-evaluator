@@ -12,7 +12,8 @@
     "compare": "tsx scripts/compare.ts",
     "refresh-dashboard": "tsx scripts/refresh-dashboard.ts",
     "dashboard": "npm run refresh-dashboard && npm run dev --workspace @challenge/dashboard",
-    "build": "npm run refresh-dashboard && npm run build --workspace @challenge/dashboard",
+    "build:dashboard": "npm run build --workspace @challenge/dashboard",
+    "build": "npm run refresh-dashboard && npm run build:dashboard",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
