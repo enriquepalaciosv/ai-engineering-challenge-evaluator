@@ -93,7 +93,7 @@ The dashboard includes:
 Evaluation stays local. Vercel only hosts the static dashboard plus the sanitized `apps/dashboard/public/data/dashboard.json` snapshot. Do not commit `data/submissions/*.json` (those files include hidden-test details).
 
 1. Import this **private** evaluator GitHub repo at [vercel.com/new](https://vercel.com/new). Grant the Vercel GitHub app access to this private repo only.
-2. Root Directory = repository root. Production branch = `main`. Node 20 is already declared in `engines`.
+2. Vercel detects Root Directory `apps/dashboard`. Keep Output Directory `apps/dashboard/dist` (relative to that root). Production branch = `main`. Node 20 is already declared in `engines`.
 3. Leave Deployment Protection off if the dashboard URLs should be publicly reachable. Anyone with the link can see team results; hidden test names stay out of `dashboard.json`.
 
 Only `main` and `challenge/*` branches auto-deploy. Each `challenge/*` branch gets a stable URL that always points at the latest commit on that branch:

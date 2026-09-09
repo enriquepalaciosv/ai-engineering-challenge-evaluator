@@ -1,6 +1,7 @@
 node_modules/
 apps/dashboard/node_modules/
 apps/dashboard/dist/
+apps/dashboard/apps/
 dist/
 .tmp/
 .env
