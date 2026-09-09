@@ -12,6 +12,7 @@ export default defineConfig({
     __CHALLENGE_REF__: JSON.stringify(process.env.VERCEL_GIT_COMMIT_REF ?? ""),
   },
   build: {
+    // Repo-root dist matches Vercel Project Settings (cwd may be apps/dashboard).
     outDir: path.join(repoRoot, "dist"),
     emptyOutDir: true,
   },
