@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-09T21:20:28.816Z",
+  "generatedAt": "2026-09-10T03:08:09.630Z",
   "submissions": [
     {
       "id": "alex-505b0587",
@@ -354,15 +354,85 @@
           "8/8 hidden checks passed."
         ]
       }
+    },
+    {
+      "id": "stanley-3464c298",
+      "label": "Stanley",
+      "createdAt": "2026-09-10T03:08:09.621Z",
+      "source": {
+        "repo": "https://github.com/enriquepalaciosv/ai-engineering-challenge.git",
+        "pr": 8,
+        "sha": "3464c29862acfd43642b9798151ca72d8eafb351",
+        "baseRef": "origin/main"
+      },
+      "correctness": {
+        "hiddenPassed": 8,
+        "hiddenTotal": 8,
+        "hiddenPercent": 100,
+        "cases": []
+      },
+      "regressionProtection": {
+        "visibleTestsPass": true,
+        "changedTestFiles": 1,
+        "addedTestCases": 13,
+        "bugRegressionSignal": true,
+        "featureRegressionSignal": true
+      },
+      "maintainability": {
+        "typecheckPass": true,
+        "lintPass": true,
+        "changedSourceFiles": 1,
+        "productionLinesAdded": 39,
+        "productionLinesDeleted": 27,
+        "pricingFunctionApproxLines": 16
+      },
+      "workflow": {
+        "activeTimeBand": "10-15m",
+        "primaryWorkflow": "Ask -> repro -> TDD -> verify",
+        "aiCostUsd": null,
+        "tools": [
+          "Cursor Ask",
+          "Cursor Agent"
+        ],
+        "models": [
+          "Claude Opus 5"
+        ],
+        "timelineSteps": 6,
+        "hasReviewStep": true,
+        "hasTddSignal": true,
+        "hasPlanSignal": true,
+        "hasDebugSignal": false,
+        "reworkItems": 4,
+        "modelSwitches": 1,
+        "humanInterventionItems": 6,
+        "completenessPercent": 100
+      },
+      "signals": {
+        "strengths": [
+          "Full hidden functional coverage for the challenge requirements.",
+          "The submitted tests explicitly protect both the bug fix and the new feature.",
+          "The change passes static verification cleanly."
+        ],
+        "improvements": [],
+        "takeaways": [
+          "Keep explicit regression tests for both repaired behavior and new behavior.",
+          "Planning before implementation is a candidate practice to retain for multi-concern changes.",
+          "The test-first/TDD signal aligns with strong explicit regression protection in this submission.",
+          "Independent AI review is worth testing as a standard pre-PR step."
+        ],
+        "evidence": [
+          "8/8 hidden checks passed."
+        ]
+      }
     }
   ],
   "recommendations": {
     "adopt": [
       {
         "title": "Keep explicit regression protection",
-        "rationale": "Nico's submission provides the strongest visible test signal while preserving 100% correctness.",
+        "rationale": "Stanley's submission provides the strongest visible test signal while preserving 100% correctness.",
         "evidence": [
-          "11 added test cases detected.",
+          "13 added test cases detected.",
           "Bug regression signal: yes.",
           "Feature regression signal: yes."
         ]
@@ -397,10 +467,10 @@
     "experimentNext": [
       {
         "title": "Combine the leanest successful flow with the strongest regression strategy",
-        "rationale": "Try the low-iteration structure observed in Nico while explicitly adopting the regression-protection behavior observed in Nico.",
+        "rationale": "Try the low-iteration structure observed in Nico while explicitly adopting the regression-protection behavior observed in Stanley.",
         "evidence": [
           "Nico: 5 logged AI workflow steps, 100% correctness.",
-          "Nico: 11 added test cases detected."
+          "Stanley: 13 added test cases detected."
         ]
       }
     ]
